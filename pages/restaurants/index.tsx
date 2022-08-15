@@ -92,9 +92,7 @@ const Restaurants: NextPage = () => {
       {
         accessorKey: 'name',
         cell: (info) => (
-          <LinkToRestaurantDetails
-            restaurant={info.row.original as IRestaurant}
-          />
+          <LinkToRestaurantDetails restaurant={info.row.original} />
         ),
         header: () => <span>Name</span>,
         size: 450,

@@ -129,7 +129,7 @@ const RestaurantsInfiniteQueryResponse = (
         }
       } else {
         return {
-          name: faker.company.companyName(),
+          name: faker.company.name(),
           id,
           cuisine:
             cuisinesListOptions[

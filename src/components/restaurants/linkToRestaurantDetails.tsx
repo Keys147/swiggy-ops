@@ -9,7 +9,11 @@ export const StyledRestaurantLink = styled.span`
   color: #282c3f;
   cursor: pointer;
 `
-const LinkToRestaurantDetails = ({ restaurant }: IRestaurant) => {
+const LinkToRestaurantDetails = ({
+  restaurant,
+}: {
+  restaurant: IRestaurant
+}) => {
   const { id, name } = restaurant
   return (
     <Link href={`/restaurants/${id}`}>
