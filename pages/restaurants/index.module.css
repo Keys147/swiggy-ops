@@ -1,0 +1,61 @@
+.swiggy_ops__restaurants_count {
+  font-size: 24px;
+  font-weight: 700;
+  color: #282c3f;
+  align-self: flex-start;
+  margin: 5px 0px 0px 0px;
+}
+
+.swiggy_ops__restaurants_search_box_container {
+  border-color: #d2d4db;
+  border-style: solid;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 11px 9px;
+  border-width: 1px;
+}
+
+.swiggy_ops__restaurants_search_box {
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 500;
+  align-self: flex-start;
+  padding: 0px;
+  border-width: 0px;
+  background: none;
+  width: 100%;
+  display: inline-block;
+  outline-width: 0px;
+}
+
+.swiggy_ops__restaurants_search_box:focus {
+  border-color: #08c;
+}
+
+.swiggy_ops__restaurants_search_box::placeholder {
+  color: #000;
+}
+
+.swiggy_ops__restaurants {
+  margin: 20px 0;
+}
+
+.swiggy_ops__restaurants_left_pane {
+  width: 76%;
+}
+
+.swiggy_ops__restaurants_list {
+  margin: 10px 0;
+  border-radius: 4px;
+  padding: 10px;
+  background: #fff;
+}
+
+.swiggy_ops__restaurants_filter_pane {
+  width: 24%;
+  height: 900px;
+  margin: 0 0 0 1%;
+  border-radius: 4px;
+  background: #fff;
+}

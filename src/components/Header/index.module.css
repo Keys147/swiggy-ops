@@ -1,0 +1,36 @@
+.swiggy_ops__header {
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.swiggy_ops__header__brand_logo {
+  width: 26px;
+  height: 40px;
+}
+
+.swiggy_ops__header__brand_name {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2.4px;
+  color: #1e1e1e;
+  align-self: flex-start;
+  margin: 12px 0 0 16px;
+}
+
+.swiggy_ops__header__add_restaurant_button {
+  width: 232px;
+  height: 41px;
+  background-color: #74b055;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 0px;
+}
+
+.swiggy_ops__header__add_restaurant_button__text {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0 10px;
+  cursor: pointer;
+}
