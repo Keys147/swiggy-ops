@@ -1,8 +1,11 @@
 import { useState, useEffect, useMemo } from 'react'
 import type { NextPage } from 'next'
+// import { useRouter } from 'next/router'
 import Image from 'next/image'
 import Head from 'next/head'
 import styled from 'styled-components'
+// import jsonLogic from 'json-logic-js'
+// import js2jl from 'js2jl'
 import { useInView } from 'react-intersection-observer'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { IInfinitePage } from '../../src/lib/interfaces/IInfinitePage'
@@ -16,6 +19,7 @@ import LinkToRestaurantDetails from '../../src/components/restaurants/linkToRest
 import FoodType from '../../src/components/restaurants/foodType'
 import DiningType from '../../src/components/restaurants/diningType'
 import LoadingState from '../../src/components/restaurants/loadingState'
+// import { getQueryString } from '../../src/lib/utilities/object'
 
 import styles from './index.module.css'
 
@@ -86,6 +90,21 @@ const Styles = styled.div`
 
 const Restaurants: NextPage = () => {
   const { ref, inView } = useInView()
+  //   const JSONLogic = jsonLogic
+  //   const JS2JL = js2jl
+  //   const { query } = useRouter()
+
+  //   const queryData = {
+  //     cuisine: ['South Indian', 'North Indian', 'American'],
+  //     pure_veg: true,
+  //     city: 'Chennai',
+  //     swiggy_super_discount__gte: 30,
+  //   }
+
+  //   {"and": [{"in": [{"var":
+  // "cuisine"}, ["American", "South Indian"]]}, {"==": [{"var": "pure_veg"}, true]}]}
+
+  //   console.log(getQueryString(queryData))
 
   const columns = useMemo(() => {
     const defaultColumns: ColumnDef<IRestaurant>[] = [

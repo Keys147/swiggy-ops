@@ -13,6 +13,8 @@
     "@tanstack/react-table": "^8.5.11",
     "axios": "^0.27.2",
     "framer-motion": "^6.5.1",
+    "js2jl": "^0.1.0",
+    "json-logic-js": "^2.0.2",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -24,6 +26,7 @@
   "devDependencies": {
     "@faker-js/faker": "^7.4.0",
     "@tanstack/react-query-devtools": "^4.0.10",
+    "@types/json-logic-js": "^2.0.1",
     "@types/node": "18.6.3",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
