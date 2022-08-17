@@ -13,7 +13,6 @@
     "@tanstack/react-table": "^8.5.11",
     "axios": "^0.27.2",
     "framer-motion": "^6.5.1",
-    "js2jl": "^0.1.0",
     "json-logic-js": "^2.0.2",
     "next": "12.2.3",
     "react": "18.2.0",

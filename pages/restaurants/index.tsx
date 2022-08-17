@@ -4,8 +4,6 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 import styled from 'styled-components'
-// import jsonLogic from 'json-logic-js'
-// import js2jl from 'js2jl'
 import { useInView } from 'react-intersection-observer'
 import { useInfiniteQuery } from '@tanstack/react-query'
 import { IInfinitePage } from '../../src/lib/interfaces/IInfinitePage'
@@ -19,9 +17,12 @@ import LinkToRestaurantDetails from '../../src/components/restaurants/linkToRest
 import FoodType from '../../src/components/restaurants/foodType'
 import DiningType from '../../src/components/restaurants/diningType'
 import LoadingState from '../../src/components/restaurants/loadingState'
+import RestaurantsFilterPane from '../../src/components/restaurants/filterPane'
+import { FiltersPaneInfoProvider } from './contexts/filters'
 // import { getQueryString } from '../../src/lib/utilities/object'
 
 import styles from './index.module.css'
+// import { camelizeObject } from '../../src/lib/utilities/object'
 
 const Styles = styled.div`
   .table-wrapper {
@@ -90,21 +91,60 @@ const Styles = styled.div`
 
 const Restaurants: NextPage = () => {
   const { ref, inView } = useInView()
-  //   const JSONLogic = jsonLogic
-  //   const JS2JL = js2jl
-  //   const { query } = useRouter()
+  // const { query } = useRouter()
+  // const queryParams = camelizeObject(query)
 
-  //   const queryData = {
-  //     cuisine: ['South Indian', 'North Indian', 'American'],
-  //     pure_veg: true,
-  //     city: 'Chennai',
-  //     swiggy_super_discount__gte: 30,
+  // const filtersDict = useMemo(() => {
+  //   const filtersDictSpecs = [
+  //     {
+  //       field: 'cuisine',
+  //       predicate: 'in',
+  //     },
+  //     {
+  //       field: 'city',
+  //       predicate: 'eq',
+  //     },
+  //     {
+  //       field: 'pureVeg',
+  //       predicate: 'eq',
+  //     },
+  //     {
+  //       field: 'takeAwayOnly',
+  //       predicate: 'eq',
+  //     },
+  //     {
+  //       field: 'swiggySuperDiscount__gte',
+  //       predicate: '>=',
+  //     },
+  //   ]
+  //   const filters: any = {
+  //     and: [],
   //   }
-
-  //   {"and": [{"in": [{"var":
-  // "cuisine"}, ["American", "South Indian"]]}, {"==": [{"var": "pure_veg"}, true]}]}
-
-  //   console.log(getQueryString(queryData))
+  //   filtersDictSpecs.forEach((spec) => {
+  //     if (spec.field in query) {
+  //       try {
+  //         filters.and.push({
+  //           [spec.predicate]: [
+  //             {
+  //               var: spec.field,
+  //             },
+  //             JSON.parse(query[spec.field]),
+  //           ],
+  //         })
+  //       } catch {
+  //         filters.and.push({
+  //           [spec.predicate]: [
+  //             {
+  //               var: spec.field,
+  //             },
+  //             query[spec.field],
+  //           ],
+  //         })
+  //       }
+  //     }
+  //   })
+  //   return filters
+  // }, [queryParams])
 
   const columns = useMemo(() => {
     const defaultColumns: ColumnDef<IRestaurant>[] = [
@@ -252,7 +292,9 @@ const Restaurants: NextPage = () => {
                 )}
               </Styles>
             </div>
-            <div className={styles.swiggy_ops__restaurants_filter_pane}></div>
+            <FiltersPaneInfoProvider value={filtersDict}>
+              <RestaurantsFilterPane />
+            </FiltersPaneInfoProvider>
           </div>
         </div>
       )}
